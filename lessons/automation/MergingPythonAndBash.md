@@ -1,5 +1,7 @@
 # Merging Python and UNIX
 
+Adapted from UT Biocomputing course and Python Data Carpentry materials.
+
 ## Putting Python in a script
 
 So far, we have run python from notebook. We might not want to do that for every solution. The notebook, for example, cannot be included in a pipeline.
