@@ -104,6 +104,12 @@ def check_against_unix(input_file, output_file, min_length=1):
 	command = "sort creatures/unicorn.dat | wc > unix_check"
 	os.system(command)	
 
+def make_output():
+	if 'processed' in os.listdir('.'):
+		print 'Processed directory exists'
+	else:
+		os.mkdir('processed')
+		print 'Processed directory created'   
 
 if  __name__ =='__main__':
   input_file = sys.argv[1]
@@ -111,5 +117,6 @@ if  __name__ =='__main__':
   min_length = 1
   if (len(sys.argv) > 3):
     min_length = int(sys.argv[3])
+  make_output()  
   word_count(input_file, output_file, min_length)
   check_against_unix(input_file, output_file, min_length)

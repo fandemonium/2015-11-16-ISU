@@ -134,3 +134,18 @@ do echo $file;
 python wordcount.py $file $file.output 1; 
 done
 ```
+
+This is a little clunky, no? We have all this directory in which processed data and unprocessed data are being stored together - that could be confusing!
+
+Let's add a function to our word count script that makes a directory in which to store our output:
+
+```python
+if 'processed' in os.listdir('.'):
+    print 'Processed directory exists'
+else:
+    os.mkdir('processed')
+    print 'Processed directory created'   
+```
+
+With a partner, take this code, make it into a function, and add it to externalCall.py. Now run the script. How do you have to modify the arguments you provide?
+
