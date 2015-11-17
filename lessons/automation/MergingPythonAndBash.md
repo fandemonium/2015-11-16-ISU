@@ -149,5 +149,23 @@ else:
     print 'Processed directory created'   
 ```
 
-With a partner, take this code, make it into a function, and add it to externalCall.py. Now run the script. How do you have to modify the arguments you provide?
+With a partner, take this code, make it into a function called make_output, and add it to externalCall.py. Now run the script. How do you have to modify the arguments you provide?
 
+
+##So ... __name__ == __main__? That's weird.
+
+This odd-looking statement tells Python that this file can be used as either a stand-alone program or as a module. This lists the actions that will occur and variables that will be defined if we execute the script.
+
+If we want to import our script as a library, and use the functions inside of it, the main statement also allows us to do this.
+
+Let's say we wanted to call the function you just created, make_output. In the wordcount.py script, add this import statement:
+
+```python
+
+import ReadOnly
+
+```
+
+Now, in the main statement, add a call to the make_output function. Where should it go? When do we want to create the output directory?
+
+How could we modify our import statement to make our function call simpler?
